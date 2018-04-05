@@ -1,0 +1,200 @@
+{
+    "searchDetails": {
+        "searchParams": {
+            "time": "week",
+            "boundary": "uk"
+        },
+        "tags": "star citizen"
+    },
+    "results": [{
+        "title": "TEST - Star Citizen is selling virtual plots of land for up to £96 a pop",
+        "date": "2017-12-02T12:34:00",
+        "description": "The space game, which already sells spaceships for hundreds of pounds, now lets you buy what are called Land Claim Licenses. This is a virtual certificate that entitles you to claim a parcel of land in the game - although the mechanic is not yet live.",
+        "image": "https://www.bing.com/th?id=ON.D0062682D0F2EAD151329AF08179ED8E&pid=News",
+        "url": "http://www.eurogamer.net/articles/2017-11-29-star-citizen-is-selling-virtual-plots-of-land-for-up-to-96",
+        "domain": "eurogamer.net",
+        "category": "ScienceAndTechnology",
+        "publisher": "Eurogamer",
+        "meta": {
+            "author": {
+                "state": true,
+                "first_name": "wesley",
+                "last_name": "yin-poole"
+            },
+            "date": "2017-12-02T12:34:00",
+            "description": "The space game, which already sells spaceships for hundreds of pounds, now lets you buy what are called Land Claim Licenses. This is a virtual certificate that entitles you to claim a parcel of land in the game - although the mechanic is not yet live.",
+            "image": "http://images.eurogamer.net/2017/articles/2017-11-29-15-13/star-citizen-is-selling-virtual-plots-of-land-for-up-to-96-1511968422792.jpg/EG11/thumbnail/1200x630/format/jpg/1942689.jpg",
+            "publisher": "Eurogamer",
+            "title": "Star Citizen is selling virtual plots of land for up to £96 a pop",
+            "url": "http://www.eurogamer.net/articles/2017-11-29-star-citizen-is-selling-virtual-plots-of-land-for-up-to-96",
+            "state": true,
+            "domain": "eurogamer.net",
+            "category": "ScienceAndTechnology",
+            "twitter": {
+                "state": true,
+                "id": 20257452,
+                "id_str": "20257452",
+                "name": "Wesley Yin-Poole",
+                "screen_name": "wyp100",
+                "location": "Brighton, England",
+                "description": "Husband. Father. Eurogamer deputy editor. Chelsea, Street Fighter and journalism. wes@eurogamer.net (DMs open)",
+                "url": "https://t.co/oQ4vLZCnBe",
+                "protected": false,
+                "followers_count": 5090,
+                "friends_count": 972,
+                "listed_count": 195,
+                "created_at": "Fri Feb 06 18:17:32 +0000 2009",
+                "favourites_count": 1762,
+                "utc_offset": 0,
+                "time_zone": "London",
+                "geo_enabled": true,
+                "verified": true,
+                "statuses_count": 19043,
+                "lang": "en"
+            },
+            "email": {
+                "state": true,
+                "address": "wesley.yin-poole@eurogamer.net",
+                "score": 56
+            }
+        }
+    }, {
+        "title": "TEST - This Week in Star Citizen",
+        "date": "2017-12-11T22:18:00",
+        "description": "First off, thank you to everyone who took the time to ask some great questions and provide feedback after we delivered the answers. We’ve been taking the time to read all of the feedback over the GravLev tech from last week’s ATV, as well as your ...",
+        "image": null,
+        "url": "https://robertsspaceindustries.com/comm-link/citizens/16323-This-Week-In-Star-Citizen",
+        "domain": "robertsspaceindustries.com",
+        "category": "Entertainment",
+        "publisher": "robertsspaceindustries.com",
+        "meta": {
+            "state": false
+        }
+    }, {
+        "title": "TEST - Star Citizen Squadron 42 updates start next week followed by an ATV special",
+        "date": "2017-12-09T02:25:00",
+        "description": "In October CIG stated that there would be Star Citizen Squadron 42 news coming in December. It’s December now and there appears to be some movement on an update coming from CIG. While CIG continues to polish up Star Citizen 3.0 as best they can, Squadron ...",
+        "image": "https://www.bing.com/th?id=ON.1589927C92B7876DF1BFD3A1E8EB6F1F&pid=News",
+        "url": "https://www.pcinvasion.com/star-citizen-squadron-42-news-getting-closer",
+        "domain": "pcinvasion.com",
+        "category": null,
+        "publisher": "PC Invasion",
+        "meta": {
+            "author": {
+                "state": true,
+                "first_name": "paul",
+                "last_name": "younger"
+            },
+            "date": "2017-12-09T02:25:00",
+            "description": "In October CIG stated that there would be Star Citizen Squadron 42 news coming in December. It’s December now and there appears to be some movement on an update coming from CIG. While CIG continues to polish up Star Citizen 3.0 as best they can, Squadron ...",
+            "image": "https://www.pcinvasion.com/wp-content/uploads/2017/05/star-citizen.jpg",
+            "publisher": "PC Invasion",
+            "title": "Star Citizen Squadron 42 updates start next week followed by an ATV special",
+            "url": "https://www.pcinvasion.com/star-citizen-squadron-42-news-getting-closer",
+            "state": true,
+            "domain": "pcinvasion.com",
+            "category": null,
+            "twitter": {
+                "state": false
+            },
+            "email": {
+                "state": false
+            }
+        }
+    }, {
+        "title": "Star Citizen Release Date, Trailer, & Latest News",
+        "date": "2017-11-29T16:57:00",
+        "description": "Star Citizen could very well be the space simulator to end all space simulators - if it ever actually comes out. The game has been in development at Cloud Imperium Games, founded by Wing Commander creator Chris Roberts, since it was successfuly crowdfunded ...",
+        "image": "https://www.bing.com/th?id=ON.EDED457C3E0D57271519A8227BE45115&pid=News",
+        "url": "http://www.denofgeek.com/us/games/star-citizen/258564/star-citizen-release-date-trailer-latest-news",
+        "domain": "denofgeek.com",
+        "category": "World",
+        "publisher": "Den Of Geek",
+        "meta": {
+            "author": {
+                "state": true,
+                "first_name": "matthew",
+                "last_name": "byrd"
+            },
+            "date": "2017-11-29T16:57:00",
+            "description": "Star Citizen could very well be the space simulator to end all space simulators - if it ever actually comes out. The game has been in development at Cloud Imperium Games, founded by Wing Commander creator Chris Roberts, since it was successfuly crowdfunded ...",
+            "image": "http://cdn2us.denofgeek.com/sites/denofgeekus/files/2017/10/star-citizen.jpg",
+            "publisher": "Den Of Geek",
+            "title": "Star Citizen Release Date, Trailer, & Latest News",
+            "url": "http://www.denofgeek.com/us/games/star-citizen/258564/star-citizen-release-date-trailer-latest-news",
+            "state": true,
+            "domain": "denofgeek.com",
+            "category": "World",
+            "twitter": {
+                "state": false
+            },
+            "email": {
+                "state": false
+            }
+        }
+    }, {
+        "title": "Star Citizen selling plots of land for up to $120",
+        "date": "2017-11-30T13:31:00",
+        "description": "Cloud Imperium Games, the maker of Star Citizen, is offering players the chance to buy plots of land on the planets, moons or asteroids controlled by UEE, within the game. The purpose of the land claim mechanism at this time is admitted to be for ...",
+        "image": "https://www.bing.com/th?id=ON.F77240229B178980249618D0DEAF225B&pid=News",
+        "url": "https://hexus.net/gaming/news/industry/112712-star-citizen-selling-plots-land-120/",
+        "domain": "hexus.net",
+        "category": "ScienceAndTechnology",
+        "publisher": "HEXUS",
+        "meta": {
+            "state": false
+        }
+    }, {
+        "title": "Forget No Man’s Sky and Star Citizen: Is this the most ambitious game ever?",
+        "date": "2017-12-07T10:29:00",
+        "description": "Kickstarter can be a cruel mistress. The website that allows fans to fund projects has seen a tirade of ambitious, exciting games pitches, but once the money has been pledged and the goal reached it becomes a nail-biting affair. Will the money be enough?",
+        "image": "https://www.bing.com/th?id=ON.2D9FAECDAC39824E4AF7B28E120A02EF&pid=News",
+        "url": "http://www.gamesradar.com/forget-no-mans-sky-and-star-citizen-is-this-the-most-ambitious-game-ever/",
+        "domain": "gamesradar.com",
+        "category": null,
+        "publisher": "GamesRadar",
+        "meta": {
+            "author": {
+                "state": true,
+                "first_name": "zoe",
+                "last_name": "delahunty-light"
+            },
+            "date": "2017-12-07T10:29:00",
+            "description": "Kickstarter can be a cruel mistress. The website that allows fans to fund projects has seen a tirade of ambitious, exciting games pitches, but once the money has been pledged and the goal reached it becomes a nail-biting affair. Will the money be enough?",
+            "image": "http://cdn.mos.cms.futurecdn.net/z8Zx3QhDj8TZaXf4iqpV5R-1200-80.jpg",
+            "publisher": "GamesRadar",
+            "title": "Forget No Man’s Sky and Star Citizen: Is this the most ambitious game ever?",
+            "url": "http://www.gamesradar.com/forget-no-mans-sky-and-star-citizen-is-this-the-most-ambitious-game-ever/",
+            "state": true,
+            "domain": "gamesradar.com",
+            "category": null,
+            "twitter": {
+                "state": true,
+                "id": 4920839734,
+                "id_str": "4920839734",
+                "name": "Zoe Delahunty-Light",
+                "screen_name": "zoe_dels",
+                "location": "",
+                "description": "| Social Editor for @GamesRadar | words for @GamesMaster @GamesTMmag @OPM_UK @OXM | lover of swords & mermaids | Aloy is my gal |",
+                "url": "https://t.co/FZzsvWngtl",
+                "protected": false,
+                "followers_count": 1374,
+                "friends_count": 565,
+                "listed_count": 37,
+                "created_at": "Tue Feb 16 20:07:04 +0000 2016",
+                "favourites_count": 3685,
+                "utc_offset": 0,
+                "time_zone": "London",
+                "geo_enabled": true,
+                "verified": true,
+                "statuses_count": 2435,
+                "lang": "en"
+            },
+            "email": {
+                "state": true,
+                "address": "zoed@gamesradar.com",
+                "score": 55
+            }
+        }
+    }]
+}

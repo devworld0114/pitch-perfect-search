@@ -1,0 +1,9 @@
+{
+    "extends": [
+        "nodejs"
+    ],
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "rules": { "no-confusing-arrow": ["error", {"allowParens": true}] }
+}

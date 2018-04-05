@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pitch-perfect-app-144",
+  "private_key_id": "bc1b19388858c073fec3603fe9d5dbd1129f0992",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCiQsJAsAqmsSOA\nohKhki968BXznftZgKjFG2iBOdynsTJCwsWUl9jblMim45qCum++SVRAPyGvG6eo\nuDPQ8slsz6dqX/iw/Liw5iSTqjCLL7kvl7fU2LloRbjf6K2KbU9xmwryt1Y4Dg7N\nzrhAlevhpiDDcodTWByNlKXIT46MpxKbY4ilNMXhMyCx931BwNaDPzWq4nSXdW5t\nNI0UjJoqCeCceub8s9gNE0n1l82Ii6aMvLnDinNDB0vsl2LWZ4/xoFRBM+AdpZzI\n52FnkDRKCuPsJ6T1gKoR8KHvfeBjbe1Ys/zZXs8tIsKT+WzpuO6gN69GLZFDmKBp\nZguBlMABAgMBAAECggEAAev773KkVCdJQxRsV4F+9mgUPvsFMXEYIqJDkIMDJoFv\nTa4PU3ZRVD+2yQ79Xyiyks6tGMAUq9V+TMXOf442GXfLyRtJE43ROU9nAdCaX8Yn\nVaFwrPy6hLIddYm0vzzSY+da6781Fj+woEJ3YUSzTxxJ013KjXev2iOPa3wJfXgG\n4GPZrGTlknTKM5qwe4+ezt/HrTWBqKg2C+ts6xzgGW8SFqCakwwxB6Lsfg22ie79\n8lp1lmm5QLlh0MBRLpA7STOxJwRN7vXZ7S6MMUMCHsabdGkqkFKDc1CzoEmVJp1V\nEIeO2qh/5bYcXakpHZDqkLH6ds4xotYX6nm789IOIQKBgQDlSU9ks+8127tmNTUQ\nJaIfzFMR49t/pQ+IEcRbMWhxi42XQ8oxIDxB/9WOsVXM1oNJrvS0t7bXlMWM0D/N\ni5sLwCmm5VUhq5K9DAmadatjSwvsRxwF8xcRyZ1HngGuFfWo6Jr/igVPKCb1/7eD\nBtSfHx7U/VwbcHaD43Lx+fjcoQKBgQC1KlhOcqKBnClWcofBGKoOzg/lfUa248kI\nEUMggid1eYr8gkupeXq+yagsqjE2zpzF1hJ+EIQ0ZapvmCPI55kA1v2/v6uulEeJ\nH1Tl/8BkMNWvuy9PaCGrYpuzx/26C26fkjkKGdsyoaiMuVoIPGcLefNgsGLpqzFI\nG1ULWcjHYQKBgGOlgq2fTXy4rC71PMRxto3fPNLvlftZfvCB2DZRuLRwE+8DdSH4\ngnekeelzxHgrWg9xy8Ome/4hF+Hkt3XbEF0A/Jkd3euuJy2lx56rOPsEKIBdPx6O\n0R3X41S2pMBFpufrf0FDeJ84MgaDRfvZwhoNalbibV83dypGdTQYkUFBAoGABJ6C\nx+VGXXWk3C5pZbQCSgRZBWnvTqR6MLl387E93lHuCEguM7EEPy8XGaRxQst71dOC\nfzJenJNnCBdh+jJlhU72A1iYwQfI1yc0W/Tsa+GO4T8tkqG+EgeenrPftUmrVWg+\nChLksuLKUGQ9dm5L1lASs4lrzDdwNz1zKqnsY6ECgYBb7kSBN3jWHymot/1TV5Yf\nZJImtQKWaMGyMQ92Fh05WBUT1RApkMcBncN1gMe3pYh2Obp3RYoFW/Mtz0lxwkQY\nDa5e5utw3PewVYKSEeAtQTGJXU6IyMd3hcdJYXmtLDrghayTGa9TsOib22Ll1PhY\nmrFMO0fGGveLIfYN4ANJag==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-f1ztp@pitch-perfect-app-144.iam.gserviceaccount.com",
+  "client_id": "104799805329677117648",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-f1ztp%40pitch-perfect-app-144.iam.gserviceaccount.com"
+}
