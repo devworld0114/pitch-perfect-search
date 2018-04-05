@@ -35,7 +35,7 @@ var firebase = require('firebase-admin');
 var serverAccount = require('./firebase.json');
 firebase.initializeApp({
     credential: firebase.credential.cert(serverAccount),
-    databaseURL: "https://pitch-perfect-app-144.firebaseio.com",    
+    databaseURL: "https://pitch-perfect-app-144.firebaseio.com",
 });
 
 firebase.database().ref('key').on('value', function(snapshot) {
@@ -387,16 +387,21 @@ app.get('/search.json', function(req, res) {
     // Trigger the search
     let query = '';
     var testQuery = false;
-    if(tags.isArray) {
-        for(let itemKey in tags) {
-            query += '"'+tags[itemKey]+'" ';
-        }
+    if(!tag) {
+        query = '""';
     } else {
-        query = '"' + tags + '"';
-        if  (tags == 'test') {
-            testQuery = true;
+        if(tags.isArray) {
+            for(let itemKey in tags) {
+                query += '"' + tags[itemKey] + '" ';
+            }
+        } else {
+            query = '"' + tags + '"';
+            if  (tags == 'test') {
+                testQuery = true;
+            }
         }
     }
+    
     // console.log(query,'<<<<< Simons code');
     if(testQuery == false) {
         initialSearchQuery(query, searchParams.boundary, searchParams.time, searchParams.offset, searchParams.count, function (resultContent, error) {
