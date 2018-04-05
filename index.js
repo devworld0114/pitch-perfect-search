@@ -7,9 +7,9 @@ const metascraper = require('metascraper');
 const twit = require('twit'); // For the Twitter API
 const jsonfile = require('jsonfile');
 var cors = require('cors');
-var path = require('path');
+// var path = require('path');
 
-app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be for users
+// app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be for users
 app.use(cors());
 
 require("babel-polyfill");
@@ -54,13 +54,16 @@ var authCheck = function(req, res, next) {
             if(dec == 'VALID') {
                 next();
             } else {
-                res.sendFile(path.join(__dirname, 'public/index.html'));
+                console.log('Failed Checking');
+                res.send('Server working well');
             }
         } catch(err) {
-            res.sendFile(path.join(__dirname, 'public/index.html'));
+            console.log('Error Checking');
+            res.send('Server working well');
         }
     } else {
-        res.sendFile(path.join(__dirname, 'public/index.html'));
+        console.log('No Auth for Checking');
+        res.send('Server working well');
     }
 }
 
@@ -401,7 +404,7 @@ app.get('/search.json', function(req, res) {
             }
         }
     }
-    
+
     // console.log(query,'<<<<< Simons code');
     if(testQuery == false) {
         initialSearchQuery(query, searchParams.boundary, searchParams.time, searchParams.offset, searchParams.count, function (resultContent, error) {
@@ -431,6 +434,10 @@ app.post('/twt_post', function(req, res) {
     res.send('200');
 });
 
+app.get('*', function(req, res) {
+    console.log('Not matched url : ' + req.url);
+    res.send('<h1>Server working well</h1>');
+});
 
 
 app.listen(port, () => console.log('App listening on port', port))
