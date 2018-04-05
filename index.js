@@ -390,7 +390,7 @@ app.get('/search.json', function(req, res) {
     // Trigger the search
     let query = '';
     var testQuery = false;
-    if(!tag) {
+    if(!tags) {
         query = '""';
     } else {
         if(tags.isArray) {
