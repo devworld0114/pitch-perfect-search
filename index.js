@@ -1,16 +1,19 @@
 // providing search functions for the Pitch Perfect app.
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 
 const request = require('request-promise'); // HTTP request with promise
 const metascraper = require('metascraper');
 const twit = require('twit'); // For the Twitter API
 const jsonfile = require('jsonfile');
 var cors = require('cors');
-// var path = require('path');
-
-// app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be for users
 app.use(cors());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 require("babel-polyfill");
 const outputFile = './tmp/data.json';
@@ -88,8 +91,10 @@ function initialSearchQuery(query, market, time, offset, count, callback) {
 
     request(options).then(bingResults => {
         console.log('\n---> Bing Search Result Estimated : ' + bingResults.totalEstimatedMatches);
-        return getArticleMetaData(bingResults);
-    }).then(result =>{
+        // return bingResults;
+        return getInitialMetaData(bingResults.value);
+    }).then(result => {
+        console.log('Callback Result : ' + result.length);
         callback(result);
     }).catch(error => {
         console.log('\n---> Bing Search error\n', error.message);
@@ -97,21 +102,16 @@ function initialSearchQuery(query, market, time, offset, count, callback) {
     });
 }
 
-async function getArticleMetaData(bingResults) {
-    
-    bingResults = bingResults.value;
+function getInitialMetaData(bingResults) {
+
+    // Set the general data before scraping anything
+
     let filteredResults = [];
-    console.log('\n---> Result length : ' + bingResults.length);
+        console.log('-> Total Article : ' + bingResults.length);
 
-    //let filteredResults = [];
     for (let i = 0; i < bingResults.length; i++) {
-
-        console.log('\n -> Point : ' + (i + 1));
-        console.log(' --> Article \n ', bingResults[i]);
-        const count = `Article ${i + 1}/${bingResults.length}:`;
-
-        // Set the general data before scraping anything
         const result = {};
+        const count = `Article ${i + 1} / ${bingResults.length} :`;
         result.title = bingResults[i].name;
         result.date = bingResults[i].datePublished;
         result.description = bingResults[i].description;
@@ -121,24 +121,69 @@ async function getArticleMetaData(bingResults) {
             result.image = null;
         }
 
-        console.log(' ------> Step 1 finished!');
-
         result.url = stripBingUrl(bingResults[i].url);
         result.domain = extractRootDomain(result.url);
         result.category = bingResults[i].category || null;
         result.publisher = bingResults[i].provider[0].name || null;
-        result.meta = {};
-        result.meta.state = false;
+        result.meta = {
+            status: false,
+        };
 
-        console.log(' ------> Step 2 finished!');
-        const meta = await metascraper.scrapeUrl(bingResults[i].url);
+        filteredResults.push(result);
+    }
+
+    return filteredResults;
+}
+
+function detailSearchQuery(result) {
+    return new Promise((resolve, reject) => {
+        var detail = getArticleMetaData(result);
+        resolve(detail);
+    });
+}
+
+async function getArticleMetaData(bingResult) {
+    
+    // let filteredResults = [];
+    // for (let i = 0; i < bingResults.length; i++) {
+
+        // console.log(' --> Article \n ', bingResults[i]);
+        // const count = `Article ${i + 1} / ${bingResults.length} :`;
+        // console.log(`\n--> ${count} start working..`);
+
+        // Set the general data before scraping anything
+        // const result = {};
+        // result.title = bingResults[i].name;
+        // result.date = bingResults[i].datePublished;
+        // result.description = bingResults[i].description;
+        // if (bingResults[i].image) {
+        //     result.image = bingResults[i].image.thumbnail.contentUrl;
+        // } else {
+        //     result.image = null;
+        // }
+
+        // result.url = stripBingUrl(bingResults[i].url);
+        // result.domain = extractRootDomain(result.url);
+        // result.category = bingResults[i].category || null;
+        // result.publisher = bingResults[i].provider[0].name || null;
+        // result.meta = {};
+        // result.meta.state = false;
+
+        const result = Object.assign({}, bingResult);
+        console.log(`\n----> Article start scraping url...`);
+        const meta = await metascraper.scrapeUrl(bingResult.url);
+        result['meta'] = {
+            state: false,
+            status: true,
+        };
 
         if (meta.author) {
             const nameArray = meta.author.split(' ');
             if (nameArray.length === 2) {
-                console.log(`${count} Author appears to be valid :)`);
+                console.log(`----> Author appears to be valid :)`);
 
                 meta.state = true;
+                meta['status'] = true;
                 meta.title = result.title;
                 meta.date = result.date;
                 meta.description = result.description;
@@ -154,27 +199,27 @@ async function getArticleMetaData(bingResults) {
                 meta.author.first_name = nameArray[0].toLowerCase();
                 meta.author.last_name = nameArray[1].toLowerCase();
 
-                console.log(`${count} Searching for a twitter account...`);
+                console.log(`----> Searching for a twitter account...`);
                 meta.twitter = await findAuthorsTwitter(meta.author, meta.publisher);
-                console.log(`${count} Searching for an email address...`);
+                console.log(`----> Searching for an email address...`);
                 meta.email = await findEmail(meta.author, meta.domain);
 
                 // Attach as meta to the article result
                 //bingResults[i].meta = meta;
                 result.meta = meta;
-                console.log(result);
+                // console.log(result);
             } else {
-                console.log(`${count} Author name not valid :( skipping...`);
+                console.log(`----> Author name not valid :( skipping...`);
             }
         } else {
-            console.log(`${count} Author not found... skipping...`);
+            console.log(`----> Author not found... skipping...`);
         }
 
-        filteredResults.push(result);
-        console.log('---------------');
-    }
+        // filteredResults.push(result);
+        // console.log(`--> Total Result : ${filteredResults.length}------------`);
+    // }
 
-    return filteredResults;
+    return result;
 }
 
 ///// TWITTER HELPERS /////
@@ -383,7 +428,7 @@ function extractHostname(url) {
 }
 
 // Express Routing
-app.get('/search.json', function(req, res) {
+app.get('/initial_search.json', function(req, res) {
     let searchParams = {time: req.query.t, boundary: req.query.l, offset: req.query.step * 10, count: 10};
     let tags = req.query.tag;
     console.log(tags);
@@ -407,7 +452,8 @@ app.get('/search.json', function(req, res) {
 
     // console.log(query,'<<<<< Simons code');
     if(testQuery == false) {
-        initialSearchQuery(query, searchParams.boundary, searchParams.time, searchParams.offset, searchParams.count, function (resultContent, error) {
+        initialSearchQuery(query, searchParams.boundary, searchParams.time, searchParams.offset, searchParams.count, 
+        function (resultContent, error) {
             if(!error) {
                 var responseContent = {
                     searchDetails: {
@@ -429,9 +475,18 @@ app.get('/search.json', function(req, res) {
 });
 
 // Express Routing
-app.post('/twt_post', function(req, res) {
-    console.log(req.query);
-    res.send('200');
+app.post('/detail_search.json', function(req, res) {
+    console.log(req.body);
+    var result = req.body;
+    detailSearchQuery(result).then(detailResult => {
+        res.json({
+            detail: detailResult
+        });
+    }).catch(err => {
+        res.json({
+            detail: result
+        });
+    });
 });
 
 app.get('*', function(req, res) {
